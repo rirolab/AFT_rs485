@@ -1,21 +1,31 @@
-Serial_RS485 to usb
-===================
+## FT sensor module
 
-THIS PACKAGE IS TESTED ON ROS MELODIC(UBUNTU 18.04LTS)
--------------------------------------------------------
+- **Enviroment**: ROS melodic(UBUNTU 18.04LTS)
+- **Modules**: Graphs, save csv file
+- **doc**: circuit diagram
 
-## 1. Please install ros melodic
+### To do
+- Fixing y label
+- Add rostopic /RS485 
+- Connect to Haetae gripper 
+- Gripper Modeling(need to add gripper cover)
 
-Link: <http://wiki.ros.org/melodic/Installation/Ubuntu>
-
-## 2. Please install pyserial
+#### 1. Please install pyserial
 
     python -m pip install pyserial
 
-## 3. if tty denied 
+#### 2. Run roscore
+    roscore
+    python connect_signal_rs485.py
+    
+#### ( if tty denied ) 
 
     sudo usermod -a -G dialout USER_NAME
 
-## 4.if port is not ttyUSB0, please rewrite the connect_signal.py line 18.
+#### ( if port is not ttyUSB0, please rewrite the connect_signal.py line 18 )
 
-## 5. rosrun 
+    ls /dev/ttyUSB0
+    
+\
+\
+TODO: Chanyoung Ahn
